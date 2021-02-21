@@ -1,0 +1,5 @@
+#ifndef SCISSORS_HEADER_
+#define SCISSORS_HEADER_
+
+
+#endif //SCISSORS_HEADER_
