@@ -27,5 +27,33 @@ int main(int argc, char **argv){
 	printf("> You choose %s, I choose %s\n", full_user_choice,
 	       full_program_choice);
 
+	if(user_choice == program_choice){
+		printf("> Draw\n");
+	} else if(user_choice == 'r'){
+		if(program_choice == 'p'){
+			printf("> I win: %s beats %s\n", full_program_choice,
+			       full_user_choice);
+		} else {
+			printf("> You win: %s beats %s\n", full_user_choice,
+			       full_program_choice);
+		}
+	} else if(user_choice == 'p'){
+		if(program_choice == 's'){
+			printf("> I win: %s beats %s\n", full_program_choice,
+			       full_user_choice);
+		} else {
+			printf("> You win: %s beats %s\n", full_user_choice,
+			       full_program_choice);
+		}
+	} else {
+		if(program_choice == 'r'){
+			printf("> I win: %s beats %s\n", full_program_choice,
+			       full_user_choice);
+		} else {
+			printf("> You win: %s beats %s\n", full_user_choice,
+			       full_program_choice);
+		}
+	}
+
 	return 0;
 }
