@@ -1,0 +1,20 @@
+[    8.216801]   with environment:
+[    8.216804]     HOME=/
+[    8.216808]     TERM=linux
+[   44.185363] hello: loading out-of-tree module taints kernel.
+[   44.191940] The parameter is 4
+[   63.266550] Exit from kernel module
+[   70.542922] ERROR: The parameter greater then 10
+[   70.546450] do_init_module: 'hello'->init suspiciously returned 1, it should follow 0/-E convention
+[   70.546450] do_init_module: loading module anyway...
+[   70.565297] CPU: 0 PID: 78 Comm: insmod Tainted: G           O      5.9.12 #1
+[   70.572465] Hardware name: Generic AM33XX (Flattened Device Tree)
+[   70.578628] [<c03108e0>] (unwind_backtrace) from [<c030b3c0>] (show_stack+0x10/0x14)
+[   70.586415] [<c030b3c0>] (show_stack) from [<c0ffc530>] (dump_stack+0xc0/0xd4)
+[   70.593685] [<c0ffc530>] (dump_stack) from [<c03dc288>] (do_init_module+0x8c/0x268)
+[   70.601382] [<c03dc288>] (do_init_module) from [<c03dedd0>] (sys_init_module+0x140/0x180)
+[   70.609599] [<c03dedd0>] (sys_init_module) from [<c03000c0>] (ret_fast_syscall+0x0/0x54)
+[   70.617724] Exception stack(0xda559fa8 to 0xda559ff0)
+[   70.622801] 9fa0:                   00001174 b6f1f5c8 000d7290 00001174 000d7238 00000001
+[   70.631018] 9fc0: 00001174 b6f1f5c8 b6d82af8 00000080 bebb7e88 bebb7e90 000d7238 000b00d2
+[   70.639230] 9fe0: bebb7b40 bebb7b30 0002eb65 b6e0dd72
