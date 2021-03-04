@@ -26,7 +26,7 @@ static int __init hello_init(void)
 		pr_notice("The parameter is %u\n", param);
 		ret = OK;
 	} else {
-		pr_err("ERROR: The parameter greater then 10");
+		pr_err("ERROR: The parameter greater then 10\n");
 		ret = ERROR;
 	}
 
@@ -35,7 +35,7 @@ static int __init hello_init(void)
 
 static void __exit hello_exit(void)
 {
-	pr_warn("Exit from kernel module");
+	pr_warn("Exit from kernel module\n");
 }
 
 module_init(hello_init);
