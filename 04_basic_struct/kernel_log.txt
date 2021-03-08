@@ -1,0 +1,10 @@
+/ # insmod hello.ko
+/ # echo "12345" > /sys/kernel/hello/list
+/ # echo "abcd" > /sys/kernel/hello/list
+/ # echo "QWERTY" > /sys/kernel/hello/list
+/ # cat /sys/kernel/hello/list
+12345 abcd QWERTY
+/ # echo "TEST" > /sys/kernel/hello/list
+/ # cat /sys/kernel/hello/list
+12345 abcd QWERTY TEST
+/ # rmmod hello.ko
