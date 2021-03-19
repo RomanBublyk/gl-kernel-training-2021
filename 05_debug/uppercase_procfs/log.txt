@@ -1,0 +1,21 @@
+/tmp # insmod uppercase.ko 
+/tmp # echo QwErTy123Ab > /proc/uppercase 
+/tmp # cat /proc/uppercase 
+QWERTY123AB
+/tmp # cat /proc/total_calls 
+1
+/tmp # cat /proc/char_processed 
+12
+/tmp # cat /proc/char_converted 
+4
+/tmp # echo 123aSdfGH > /proc/uppercase 
+/tmp # cat /proc/uppercase 
+123ASDFGH
+/tmp # cat /proc/total_calls 
+2
+/tmp # cat /proc/char_processed 
+22
+/tmp # cat /proc/char_converted 
+7
+/tmp # rmmod uppercase.ko 
+/tmp # 

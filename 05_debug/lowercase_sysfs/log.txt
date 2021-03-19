@@ -1,0 +1,21 @@
+/tmp # insmod lowercase.ko 
+/tmp # echo QwErTy123Ab > /sys/kernel/lowercase/converter 
+/tmp # cat /sys/kernel/lowercase/converter 
+qwerty123ab
+/tmp # cat /sys/kernel/lowercase/total_calls 
+1
+/tmp # cat /sys/kernel/lowercase/char_processed 
+12
+/tmp # cat /sys/kernel/lowercase/char_converted 
+4
+/tmp # echo 123aSdfGH > /sys/kernel/lowercase/converter 
+/tmp # cat /sys/kernel/lowercase/converter 
+123asdfgh
+/tmp # cat /sys/kernel/lowercase/total_calls 
+2
+/tmp # cat /sys/kernel/lowercase/char_processed 
+22
+/tmp # cat /sys/kernel/lowercase/char_converted 
+7
+/tmp # rmmod lowercase.ko 
+/tmp # 
